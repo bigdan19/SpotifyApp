@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-// Autorisation View for user to register or log in with Spotify
+// Authorization View for user to register or log in with Spotify
 class AuthViewController: UIViewController, WKNavigationDelegate {
     
     
@@ -54,5 +54,11 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         }
         
         print("Code : \(code)")
+        AuthManager.shared.exchangeCodeForToken(code: code) { [ weak self] success in
+            DispatchQueue.main.async {
+                self?.navigationController?.popToRootViewController(animated: true)
+                self?.completionHandler?(success)
+            }
+        }
     }
 }

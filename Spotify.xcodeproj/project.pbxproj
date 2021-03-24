@@ -25,6 +25,7 @@
 		653B013C260947E200D2CAE5 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653B013B260947E200D2CAE5 /* Artist.swift */; };
 		653B013F260947F000D2CAE5 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653B013E260947F000D2CAE5 /* UserProfile.swift */; };
 		65C633142609580F001F6F58 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C633132609580F001F6F58 /* Extensions.swift */; };
+		65ECEA74260BDD8B00F35EC5 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ECEA73260BDD8B00F35EC5 /* AuthResponse.swift */; };
 		65FC101B2609410700919E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC101A2609410700919E3D /* AppDelegate.swift */; };
 		65FC101D2609410700919E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC101C2609410700919E3D /* SceneDelegate.swift */; };
 		65FC101F2609410700919E3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC101E2609410700919E3D /* HomeViewController.swift */; };
@@ -51,6 +52,7 @@
 		653B013B260947E200D2CAE5 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		653B013E260947F000D2CAE5 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		65C633132609580F001F6F58 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		65ECEA73260BDD8B00F35EC5 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		65FC10172609410700919E3D /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FC101A2609410700919E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65FC101C2609410700919E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				653B0138260947D600D2CAE5 /* AudioTrack.swift */,
 				653B013B260947E200D2CAE5 /* Artist.swift */,
 				653B013E260947F000D2CAE5 /* UserProfile.swift */,
+				65ECEA73260BDD8B00F35EC5 /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				653B01052609465F00D2CAE5 /* TabBarViewController.swift in Sources */,
 				65FC101F2609410700919E3D /* HomeViewController.swift in Sources */,
 				653B012F2609479300D2CAE5 /* HapticsManager.swift in Sources */,
+				65ECEA74260BDD8B00F35EC5 /* AuthResponse.swift in Sources */,
 				653B0139260947D600D2CAE5 /* AudioTrack.swift in Sources */,
 				653B0113260946DB00D2CAE5 /* AuthViewController.swift in Sources */,
 				65FC101B2609410700919E3D /* AppDelegate.swift in Sources */,

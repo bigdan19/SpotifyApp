@@ -40,7 +40,7 @@ class WelcomeViewController: UIViewController {
         
     }
     
-    // When SignIn is tapped Authorisation View is pushed on screen
+    // When SignIn is tapped Authorization View is pushed on screen
     @objc func didTapSignIn() {
         let vc = AuthViewController()
         vc.completionHandler = { [weak self] success in
@@ -54,5 +54,20 @@ class WelcomeViewController: UIViewController {
     
     private func handleSignIn(success: Bool) {
         // Log user in or yell at them for error
+        guard success else {
+            let allert = UIAlertController(title: "Oops",
+                                           message: "Something went wrong when signing in.",
+                                           preferredStyle: .alert
+            )
+            allert.addAction(UIAlertAction(title: "Dismiss",
+                                           style: .cancel,
+                                           handler: nil)
+            )
+            return
+        }
+        
+        let mainAppTabBarVC = TabBarViewController()
+        mainAppTabBarVC.modalPresentationStyle = .fullScreen
+        present(mainAppTabBarVC, animated: true)
     }
 }
