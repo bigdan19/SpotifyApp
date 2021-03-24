@@ -7,8 +7,10 @@
 
 import UIKit
 
+// Welcome screen
 class WelcomeViewController: UIViewController {
     
+    // Setting up SignIn Button to register or login with Spotify
     private let signInButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
@@ -38,6 +40,7 @@ class WelcomeViewController: UIViewController {
         
     }
     
+    // When SignIn is tapped Authorisation View is pushed on screen
     @objc func didTapSignIn() {
         let vc = AuthViewController()
         vc.completionHandler = { [weak self] success in

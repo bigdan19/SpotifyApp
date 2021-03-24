@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Library tab on main view
 class LibraryViewController: UIViewController {
 
     override func viewDidLoad() {

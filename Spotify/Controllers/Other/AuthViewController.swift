@@ -8,8 +8,11 @@
 import UIKit
 import WebKit
 
+// Autorisation View for user to register or log in with Spotify
 class AuthViewController: UIViewController, WKNavigationDelegate {
     
+    
+    // Creating WKWebView and setting it up
     private let webView: WKWebView = {
         let prefs = WKWebpagePreferences()
         prefs.allowsContentJavaScript = true
@@ -28,6 +31,7 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         view.backgroundColor = .systemBackground
         webView.navigationDelegate = self
         view.addSubview(webView)
+        // Getting url from AuthManager and loading it on screen
         guard let url = AuthManager.shared.signInURL else {
             return
         }

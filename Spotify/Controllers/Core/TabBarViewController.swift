@@ -13,11 +13,13 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
-
+        
+        // Creating 3 ViewControllers for TabView
         let vc1 = HomeViewController()
         let vc2 = SearchViewController()
         let vc3 = LibraryViewController()
         
+        // Setting up 3 ViewControllers for TabView
         vc1.title = "Browse"
         vc2.title = "Search"
         vc3.title = "Library"
@@ -26,6 +28,7 @@ class TabBarViewController: UITabBarController {
         vc2.navigationItem.largeTitleDisplayMode = .always
         vc3.navigationItem.largeTitleDisplayMode = .always
         
+        // Creating 3 NavControllers for TabView
         let nav1 = UINavigationController(rootViewController: vc1)
         let nav2 = UINavigationController(rootViewController: vc2)
         let nav3 = UINavigationController(rootViewController: vc3)
@@ -38,6 +41,7 @@ class TabBarViewController: UITabBarController {
         nav2.navigationBar.prefersLargeTitles = true
         nav3.navigationBar.prefersLargeTitles = true
         
+        // Setting up 3 NavControllers for main page (TabBarView )
         setViewControllers([nav1, nav2, nav3], animated: false)
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Search tab on main view
 class SearchViewController: UIViewController {
 
     override func viewDidLoad() {

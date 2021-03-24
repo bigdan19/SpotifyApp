@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Home tab on main view
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
