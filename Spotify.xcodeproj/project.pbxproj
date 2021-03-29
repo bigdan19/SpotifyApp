@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65389535261275A7009F1074 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65389534261275A7009F1074 /* SettingsModels.swift */; };
 		653B01052609465F00D2CAE5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653B01042609465F00D2CAE5 /* TabBarViewController.swift */; };
 		653B010A2609469C00D2CAE5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653B01092609469C00D2CAE5 /* SearchViewController.swift */; };
 		653B010D260946B000D2CAE5 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653B010C260946B000D2CAE5 /* LibraryViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65389534261275A7009F1074 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		653B01042609465F00D2CAE5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		653B01092609469C00D2CAE5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		653B010C260946B000D2CAE5 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				653B013B260947E200D2CAE5 /* Artist.swift */,
 				653B013E260947F000D2CAE5 /* UserProfile.swift */,
 				65ECEA73260BDD8B00F35EC5 /* AuthResponse.swift */,
+				65389534261275A7009F1074 /* SettingsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				65C633142609580F001F6F58 /* Extensions.swift in Sources */,
 				653B01232609474D00D2CAE5 /* PlaylistViewController.swift in Sources */,
 				653B013C260947E200D2CAE5 /* Artist.swift in Sources */,
+				65389535261275A7009F1074 /* SettingsModels.swift in Sources */,
 				65FC101D2609410700919E3D /* SceneDelegate.swift in Sources */,
 				653B01202609471900D2CAE5 /* PlayerViewController.swift in Sources */,
 				653B01262609475B00D2CAE5 /* SearchResultViewController.swift in Sources */,
