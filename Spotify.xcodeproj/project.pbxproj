@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,6 +36,8 @@
 		65C633142609580F001F6F58 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C633132609580F001F6F58 /* Extensions.swift */; };
 		65E535C9261BC50B00A3F5E6 /* RecommendationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E535C8261BC50B00A3F5E6 /* RecommendationsResponse.swift */; };
 		65ECEA74260BDD8B00F35EC5 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ECEA73260BDD8B00F35EC5 /* AuthResponse.swift */; };
+		65EE9F1E262CE49300981C91 /* FeaturePlaylistCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE9F1D262CE49300981C91 /* FeaturePlaylistCellViewModel.swift */; };
+		65EE9F21262CE4EB00981C91 /* RecommendedTrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE9F20262CE4EB00981C91 /* RecommendedTrackCellViewModel.swift */; };
 		65FC101B2609410700919E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC101A2609410700919E3D /* AppDelegate.swift */; };
 		65FC101D2609410700919E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC101C2609410700919E3D /* SceneDelegate.swift */; };
 		65FC101F2609410700919E3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC101E2609410700919E3D /* HomeViewController.swift */; };
@@ -75,6 +77,8 @@
 		65C633132609580F001F6F58 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		65E535C8261BC50B00A3F5E6 /* RecommendationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsResponse.swift; sourceTree = "<group>"; };
 		65ECEA73260BDD8B00F35EC5 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		65EE9F1D262CE49300981C91 /* FeaturePlaylistCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturePlaylistCellViewModel.swift; sourceTree = "<group>"; };
+		65EE9F20262CE4EB00981C91 /* RecommendedTrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTrackCellViewModel.swift; sourceTree = "<group>"; };
 		65FC10172609410700919E3D /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FC101A2609410700919E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65FC101C2609410700919E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +108,6 @@
 				FAC18FC610C2952C92441EDA /* Pods-Spotify.debug.xcconfig */,
 				F68AB6135EB3E0CDFB60182F /* Pods-Spotify.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -215,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				65668526262B810E00C59F64 /* NewReleasesCellViewModel.swift */,
+				65EE9F1D262CE49300981C91 /* FeaturePlaylistCellViewModel.swift */,
+				65EE9F20262CE4EB00981C91 /* RecommendedTrackCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -365,10 +370,12 @@
 				653B0136260947CA00D2CAE5 /* Playlist.swift in Sources */,
 				653B01292609477800D2CAE5 /* AuthManager.swift in Sources */,
 				65668527262B810E00C59F64 /* NewReleasesCellViewModel.swift in Sources */,
+				65EE9F21262CE4EB00981C91 /* RecommendedTrackCellViewModel.swift in Sources */,
 				653B0117260946E500D2CAE5 /* WelcomeViewController.swift in Sources */,
 				65241BBE261A62ED00D2426E /* APIImage.swift in Sources */,
 				653B011D2609471000D2CAE5 /* ProfileViewController.swift in Sources */,
 				653B01052609465F00D2CAE5 /* TabBarViewController.swift in Sources */,
+				65EE9F1E262CE49300981C91 /* FeaturePlaylistCellViewModel.swift in Sources */,
 				65FC101F2609410700919E3D /* HomeViewController.swift in Sources */,
 				655F1036261E853400D7D976 /* RecommendedTrackCollectionViewCell.swift in Sources */,
 				653B012F2609479300D2CAE5 /* HapticsManager.swift in Sources */,

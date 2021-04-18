@@ -14,6 +14,8 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
     
     private let albumCoverImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 3
         imageView.image = UIImage(systemName: "photo")
         imageView.contentMode = .scaleAspectFill
         return imageView
