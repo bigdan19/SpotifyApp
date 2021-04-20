@@ -253,7 +253,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let verticalGroup = NSCollectionLayoutGroup.vertical(
                 layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1.0),
-                    heightDimension: .absolute(390)),
+                    heightDimension: .absolute(370)),
                 subitem: item,
                 count: 3
                 )
@@ -261,7 +261,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let horizontalGroup = NSCollectionLayoutGroup.horizontal(
                 layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(0.9),
-                    heightDimension: .absolute(390)),
+                    heightDimension: .absolute(370)),
                 subitem: verticalGroup,
                 count: 1
                 )

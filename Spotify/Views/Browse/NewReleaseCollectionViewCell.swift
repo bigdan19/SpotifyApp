@@ -23,21 +23,21 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
     
     private let albumNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 20, weight: .semibold)
+        label.font = .systemFont(ofSize: 18, weight: .regular)
         label.numberOfLines = 0
         return label
     }()
     
     private let numberOfTracksLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .thin)
-        label.numberOfLines = 0
+        label.font = .systemFont(ofSize: 16, weight: .thin)
+        label.numberOfLines = 1
         return label
     }()
     
     private let artistNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .light)
+        label.font = .systemFont(ofSize: 16, weight: .light)
         label.numberOfLines = 0
         return label
     }()
