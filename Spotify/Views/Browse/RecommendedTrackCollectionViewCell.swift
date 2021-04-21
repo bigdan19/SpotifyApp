@@ -13,6 +13,8 @@ class RecommendedTrackCollectionViewCell: UICollectionViewCell {
     private let albumCoverImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "photo")
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 3
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -26,7 +28,7 @@ class RecommendedTrackCollectionViewCell: UICollectionViewCell {
     
     private let artistNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 15, weight: .thin)
+        label.font = .systemFont(ofSize: 16, weight: .ultraLight)
         label.numberOfLines = 0
         return label
     }()
