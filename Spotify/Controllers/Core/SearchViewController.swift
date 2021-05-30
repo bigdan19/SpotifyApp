@@ -8,7 +8,7 @@
 import UIKit
 
 // Search tab on main view
-class SearchViewController: UIViewController, UISearchResultsUpdating {
+class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
     
     let searchController: UISearchController = {
@@ -60,6 +60,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
 
         view.backgroundColor = .systemBackground
         searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         view.addSubview(collectionView)
         collectionView.register(CategoryCollectionViewCell.self,
@@ -87,24 +88,31 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         collectionView.frame = view.bounds
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-//        guard let resultsController = searchController.searchResultsController as? SearchResultViewController,
-        guard let _ = searchController.searchResultsController as? SearchResultViewController,
-              let query = searchController.searchBar.text,
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let resultsController = searchController.searchResultsController as? SearchResultViewController,
+              let query = searchBar.text,
               !query.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        // resultsController.update(with: results)
-        print(query)
-        // perform search
-        // APIcaller.shared.search
+        
+        APICaller.shared.search(with: query) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let results):
+                    print("success")
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
-    
-    
-    
-
+    func updateSearchResults(for searchController: UISearchController) {
+//        guard let resultsController = searchController.searchResultsController as? SearchResultViewController,
+        
+    }
 }
+
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
