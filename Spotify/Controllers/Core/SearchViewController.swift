@@ -98,7 +98,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         APICaller.shared.search(with: query) { result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let results):
+                case .success(_):
                     print("success")
                 case .failure(let error):
                     print(error.localizedDescription)

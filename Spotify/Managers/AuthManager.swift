@@ -8,23 +8,58 @@
 import Foundation
 
 final class AuthManager {
+    
+    
+
     static let shared = AuthManager()
+    
+    var details = Constants()
     
     private var refreshingToken = false
     
+    
     struct Constants {
-        static let clientID = "d2be471fdfec46bbb7cdb098b3ac81e2"
-        static let clientSecret = "d731796a49404a6a9bb031992fa44a17"
-        static let tokenAPIURL = "https://accounts.spotify.com/api/token"
-        static let redirectURI = "https://github.com/bigdan19/"
-        static let scopes = "user-read-private%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20user-follow-read%20user-library-modify%20user-library-read%20user-read-email"
+        var clientID = ""
+        var clientSecret = ""
+        var tokenAPIURL = ""
+        var redirectURI = ""
+        var scopes = ""
+        
+        func getPlist(withName name: String) -> [String:Any]?
+        {
+            if  let path = Bundle.main.path(forResource: name, ofType: "plist"),
+                let xml = FileManager.default.contents(atPath: path)
+            {
+                return (try? PropertyListSerialization.propertyList(from: xml, options: .mutableContainersAndLeaves, format: nil)) as? [String:Any]
+            }
+
+            return nil
+        }
+        
+        init() {
+            let plist = getPlist(withName: "SpotifyCredentials") ?? [:]
+            self.clientID = plist["clientID"] as! String
+            self.clientSecret = plist["clientSecret"] as! String
+            self.tokenAPIURL = plist["tokenAPIURL"] as! String
+            self.redirectURI = plist["redirectURI"] as! String
+            self.scopes = plist["scopes"] as! String
+            
+        }
     }
     
-    private init() {}
+    
+    
+    private init() {
+        
+    }
+    
+    
+    
+    
     
     public var signInURL: URL? {
         let base = "https://accounts.spotify.com/authorize"
-        let string = "\(base)?response_type=code&client_id=\(Constants.clientID)&scope=\(Constants.scopes)&redirect_uri=\(Constants.redirectURI)&show_dialog=TRUE"
+        let string = "\(base)?response_type=code&client_id=\(details.clientID)&scope=\(details.scopes)&redirect_uri=\(details.redirectURI)&show_dialog=TRUE"
         return URL(string: string)
     }
     
@@ -59,7 +94,7 @@ final class AuthManager {
     )
         {
             //Get token
-        guard let url = URL(string: Constants.tokenAPIURL) else {
+        guard let url = URL(string: details.tokenAPIURL) else {
             return
         }
         
@@ -70,7 +105,7 @@ final class AuthManager {
             URLQueryItem(name: "code",
                          value: code),
             URLQueryItem(name: "redirect_uri",
-                         value: Constants.redirectURI)
+                         value: details.redirectURI)
         ]
         
         var request = URLRequest(url: url)
@@ -79,7 +114,7 @@ final class AuthManager {
                          forHTTPHeaderField: "Content-Type")
         request.httpBody = components.query?.data(using: .utf8)
         
-        let basicToken = Constants.clientID+":"+Constants.clientSecret
+        let basicToken = details.clientID+":"+details.clientSecret
         let data = basicToken.data(using: .utf8)
         guard let base64String = data?.base64EncodedString() else {
             print("Failure to get base64")
@@ -147,7 +182,7 @@ final class AuthManager {
         
         //Refresh Token
         
-        guard let url = URL(string: Constants.tokenAPIURL) else {
+        guard let url = URL(string: details.tokenAPIURL) else {
             return
         }
         
@@ -167,7 +202,7 @@ final class AuthManager {
                          forHTTPHeaderField: "Content-Type")
         request.httpBody = components.query?.data(using: .utf8)
         
-        let basicToken = Constants.clientID+":"+Constants.clientSecret
+        let basicToken = details.clientID+":"+details.clientSecret
         let data = basicToken.data(using: .utf8)
         guard let base64String = data?.base64EncodedString() else {
             print("Failure to get base64")

@@ -28,8 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window .makeKeyAndVisible()
         self.window = window
-        
         return true
+    }
+    
+    func getPlist(withName name: String) -> [String:Any]?
+    {
+        if  let path = Bundle.main.path(forResource: name, ofType: "plist"),
+            let xml = FileManager.default.contents(atPath: path)
+        {
+            return (try? PropertyListSerialization.propertyList(from: xml, options: .mutableContainersAndLeaves, format: nil)) as? [String:Any]
+        }
+
+        return nil
     }
 
     // MARK: UISceneSession Lifecycle

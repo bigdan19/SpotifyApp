@@ -33,6 +33,7 @@
 		655F1033261E851300D7D976 /* FeaturedPlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655F1032261E851300D7D976 /* FeaturedPlaylistCollectionViewCell.swift */; };
 		655F1036261E853400D7D976 /* RecommendedTrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655F1035261E853400D7D976 /* RecommendedTrackCollectionViewCell.swift */; };
 		65668527262B810E00C59F64 /* NewReleasesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65668526262B810E00C59F64 /* NewReleasesCellViewModel.swift */; };
+		6594F7D126680DB100149A88 /* SpotifyCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6594F7D026680DB100149A88 /* SpotifyCredentials.plist */; };
 		65A5827B263369100041EF2F /* PlaylistHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5827A263369100041EF2F /* PlaylistHeaderCollectionReusableView.swift */; };
 		65A5827E26336C970041EF2F /* PlaylistHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5827D26336C970041EF2F /* PlaylistHeaderViewModel.swift */; };
 		65A993E6264B41FB00BB13DE /* TitleHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A993E5264B41FB00BB13DE /* TitleHeaderCollectionReusableView.swift */; };
@@ -86,6 +87,7 @@
 		655F1032261E851300D7D976 /* FeaturedPlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		655F1035261E853400D7D976 /* RecommendedTrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		65668526262B810E00C59F64 /* NewReleasesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesCellViewModel.swift; sourceTree = "<group>"; };
+		6594F7D026680DB100149A88 /* SpotifyCredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SpotifyCredentials.plist; sourceTree = "<group>"; };
 		65A5827A263369100041EF2F /* PlaylistHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		65A5827D26336C970041EF2F /* PlaylistHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderViewModel.swift; sourceTree = "<group>"; };
 		65A993E5264B41FB00BB13DE /* TitleHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				653B01282609477800D2CAE5 /* AuthManager.swift */,
 				653B012B2609478800D2CAE5 /* APICaller.swift */,
 				653B012E2609479300D2CAE5 /* HapticsManager.swift */,
+				6594F7D026680DB100149A88 /* SpotifyCredentials.plist */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65FC10272609410800919E3D /* LaunchScreen.storyboard in Resources */,
+				6594F7D126680DB100149A88 /* SpotifyCredentials.plist in Resources */,
 				65FC10242609410800919E3D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
